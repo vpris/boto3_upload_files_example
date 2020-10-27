@@ -5,12 +5,11 @@ from os import listdir
 from os.path import isfile, join
 import boto3
 
-# Yandex S3 settings.
-AWS_ACCESS_KEY_ID = "cw5g6od3L8RVNX9wxM2r"
-AWS_SECRET_ACCESS_KEY = "3clPnFXBui6th_nvNBGBsxwCiu-L-y1Q-6H6_mZQ"
-AWS_BUCKET_NAME = "database-sandbox"
-AWS_STORAGE_URL = "storage.yandexcloud.net"
-AWS_AUTH_REGION_NAME = "ru-central1"
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_BUCKET_NAME = os.environ.get("AWS_BUCKET_NAME")
+AWS_STORAGE_URL = os.environ.get("AWS_STORAGE_URL")
+AWS_AUTH_REGION_NAME = os.environ.get("AWS_AUTH_REGION_NAME")
 
 filepath = "test/"
 
